@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовая страница</title>
+    <style>
+        /* Базовый фон страницы */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Общий стиль для всех цветных ячеек */
+        .test-block {
+            border: 2px solid #333333;
+            padding: 15px;
+            margin-bottom: 20px;
+            /* Ограничиваем ширину для удобства чтения на ПК */
+            max-width: 800px; 
+        }
+
+        /* Цвета ячеек */
+        .block-text  { background-color: #e0f7fa; } /* Голубой */
+        .block-photo { background-color: #e8f5e9; } /* Зеленый */
+        .block-gif   { background-color: #fff9c4; } /* Желтый */
+        .block-audio { background-color: #f3e5f5; } /* Фиолетовый */
+        .block-video { background-color: #ffebee; } /* Красный */
+
+        /* Стили для демонстрации шрифтов */
+        .font-serif { font-family: "Times New Roman", Times, serif; }
+        .font-mono  { font-family: "Courier New", Courier, monospace; }
+        .font-sans  { font-family: Arial, Helvetica, sans-serif; }
+        
+        .text-bold { font-weight: bold; }
+        .text-italic { font-style: italic; }
+        .text-underline { text-decoration: underline; }
+        .text-strike { text-decoration: line-through; }
+        .text-upper { text-transform: uppercase; }
+
+        /* Ограничение размера медиа, чтобы не ломало верстку */
+        .media-content {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Тестовая страница</h1>
+    <p>Ниже расположены блоки с разным контентом для проверки отображения.</p>
+
+    <!-- БЛОК 1: ТЕКСТ И ШРИФТЫ -->
+    <div class="test-block block-text">
+        <h2>1. Текст и шрифты (Голубой блок)</h2>
+        <h3>Заголовки</h3>
+        <p>Обычный текст (Arial). Проверка читаемости.</p>
+        
+        <p class="font-serif">Этот текст написан шрифтом с засечками (Times New Roman).</p>
+        <p class="font-mono">Этот текст написан моноширинным шрифтом (Courier New).</p>
+        
+        <h4>Стили текста</h4>
+        <p>
+            <span class="text-bold">Жирный текст</span>, 
+            <span class="text-italic">Курсив</span>, 
+            <span class="text-underline">Подчеркнутый</span>, 
+            <span class="text-strike">Зачеркнутый</span>, 
+            <span class="text-upper">КАПС</span>.
+        </p>
+    </div>
+
+    <!-- БЛОК 2: ФОТО -->
+    <div class="test-block block-photo">
+        <h2>2. Фото (Зеленый блок)</h2>
+        <p>Обычная картинка формата JPG/PNG:</p>
+        <!-- Ссылка на стандартную картинку-заглушку -->
+        <img src="https://i.pinimg.com/1200x/97/6b/63/976b63a0e3efa00205ec19d86300f77e.jpg" alt="Тестовое фото" class="media-content">
+    </div>
+
+    <!-- БЛОК 3: ГИФКА -->
+    <div class="test-block block-gif">
+        <h2>3. GIF Анимация (Желтый блок)</h2>
+        <p>Проверка анимации (если телефон поддерживает):</p>
+        <!-- Ссылка на тестовую гифку -->
+        <img src="https://media.giphy.com/media/3o7TKsQ8XJvZ1s7w6Y/giphy.gif" alt="Тестовая гифка" class="media-content" style="max-height: 200px;">
+    </div>
+
+    <!-- БЛОК 4: АУДИО (МЕДИА) -->
+    <div class="test-block block-audio">
+        <h2>4. Аудио (Фиолетовый блок)</h2>
+        <p>Стандартный HTML5 плеер (на Nokia может не работать или открываться как файл):</p>
+        <audio controls class="media-content">
+            <!-- Заглушка звука, если браузер поддерживает -->
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+        </audio>
+    </div>
+
+    <!-- БЛОК 5: ВИДЕО -->
+    <div class="test-block block-video">
+        <h2>5. Видео (Красный блок)</h2>
+        <p>Стандартный HTML5 плеер (на Nokia может не работать):</p>
+        <video controls class="media-content" style="max-height: 300px;">
+            <!-- Заглушка видео -->
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <!-- Ссылка для старых браузеров -->
+        <p><a href="https://www.w3schools.com/html/mov_bbb.mp4">Скачать видеофайл</a> (если плеер не работает)</p>
+    </div>
+
+</body>
+</html>
